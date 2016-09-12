@@ -1,0 +1,28 @@
+<script>
+    var firstname = prompt("What is your first name");
+    var lastname = prompt("What is your last name");
+    var number = prompt("What is your number");
+    var username = prompt ("What would you like your username to be?");
+    var passwordType = prompt("Type in a password");
+    var passwordConfirm = prompt("Confirm your password");
+    if (passwordType == passwordConfirm)
+    {
+        alert("You are all set");
+        console.log("PROFILE");
+        console.log(username);
+        console.log(firstname + " " + lastname);
+        var tweet = prompt("Type in a tweet");
+        if (tweet.length > 140)
+        {
+            console.log("ERROR");
+        }
+        if (tweet.length <= 140)
+        {
+            console.log(tweet);
+        }
+    }
+    if (passwordType != passwordConfirm)
+    {
+        alert("OK, you can't go onto twitter yet!");
+    }
+</script>
