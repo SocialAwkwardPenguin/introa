@@ -1,0 +1,35 @@
+<script>
+ 
+    var moneyInBank = 100000;
+    var BankDec = prompt("Would you like to make a deposit or withdrawl");
+    
+    if (BankDec == "deposit")
+    {
+        deposit();
+    }
+    
+    if (BankDec == "withdrawl")
+    {
+        withdraw();
+    }
+    
+    function deposit() {
+        var deposit = parseInt(prompt("How much money would you like to deposit?"));
+        moneyInBank = moneyInBank + deposit;
+        console.log("You have " + moneyInBank + " in your bank account");
+    }
+    
+    function withdraw() {
+        var withdrawl = parseInt(prompt("How much money would you like to withdraw?"));
+        if (withdrawl <= 100000)
+        {
+            moneyInBank = moneyInBank - withdrawl;
+            console.log("You have " + moneyInBank + " in your bank account")
+        }
+        if (withdrawl > 100000)
+        {
+            alert("NO! You can't withdraw that much");
+        }
+    }
+     
+</script>
