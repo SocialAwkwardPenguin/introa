@@ -1,0 +1,76 @@
+<script>
+    var Paying = "";
+    var RoundedMoney = "";
+    var Payback = "";
+    
+    function MerchAsk() {
+        var Dollars = parseFloat(prompt("How much money do your objects cost, starting with dollars?"));
+    
+
+        if (Dollars <= 9.99) {
+            var Tax = (Dollars * 0.06);
+        }
+
+        if (100.01 > Dollars && Dollars > 9.99) {
+            var Tax = (Dollars * 0.05);
+        }
+
+        if (100.01 <= Dollars) {
+            var Tax = (Dollars * 0.04);
+        }
+
+        TotalMoney = (Dollars + Tax);
+        RoundedMoney = Math.round(TotalMoney * 100) / 100
+        console.log(RoundedMoney);
+    }
+    
+    function PayAsk() {
+        Paying = parseFloat(prompt("How much money would you like to pay?"));
+        
+        if (Paying < RoundedMoney) {
+            var NOGO = alert("That is not enough money... Let me ask again...");
+            PayAsk();
+        return;
+        }
+        
+        if (Paying > RoundedMoney) {
+            Calculate();
+        }
+    }
+        
+    
+    function Calculate(Jacksons, Hamiltons, Lincolns, Washingtons, quarters, dimes, nickels, pennies) {
+        Payback = (Paying - RoundedMoney);
+        console.log("You will get $" + Payback + " back!");
+        Jacksons = Math.floor(Payback / 20);
+        var LeftAfterJacksons = Payback - (20 * Jacksons);
+        Hamiltons = Math.floor(LeftAfterJacksons / 10);
+        var LeftAfterHamiltons = LeftAfterJacksons - (10 * Hamiltons);
+        Lincolns = Math.floor(LeftAfterHamiltons / 5);
+        var LeftAfterLincolns = LeftAfterHamiltons - (5 * Lincolns);
+        Washingtons = Math.floor(LeftAfterLincolns / 1);
+        var LeftAfterWashingtons = LeftAfterLincolns - (Washingtons);
+        quarters = Math.floor(LeftAfterWashingtons / 0.25);
+        var laq = LeftAfterWashingtons - (0.25 * quarters);
+        dimes =  Math.floor(laq / 0.10);
+        var lad = laq - (0.10 * dimes);
+        nickels = Math.floor(lad / 0.05);
+        var lan = lad - (0.05 * nickels);
+        pennies = Math.floor(lan / 0.01);
+        console.log("You have...");
+        console.log(Jacksons + " $20 dollar bills");
+        console.log(Hamiltons + " $10 dollar bills");
+        console.log(Lincolns + " $5 dollar bills");
+        console.log(Washingtons + " $1 dollar bills");
+        console.log(quarters + " quarters");
+        console.log(dimes + " dimes");
+        console.log(nickels + " nickels");
+        console.log(pennies + " pennies");
+        
+        
+    }    
+        
+    MerchAsk();
+    PayAsk();  
+    
+</script>
