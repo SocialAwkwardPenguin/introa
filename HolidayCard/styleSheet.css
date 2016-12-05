@@ -1,0 +1,71 @@
+body {
+    background: url("wov.png");
+}
+
+#photoWrapper {
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
+#thePhoto {
+    width: 100%;
+    height: 75%;
+}
+
+
+ 
+#BackButton {
+    float: right;
+    font-family: 'Calibri', cursive;
+}
+#NextButton {
+    position: relative;
+    float: right;
+    font-family: 'Calibri', cursive;
+}
+
+
+
+
+
+#ToStartButton {
+    position: relative;
+    font-family: 'Calibri', cursive;
+
+
+}
+button {
+    background: black;
+    color: yellow;
+}
+
+.center{
+    text-align: center;
+    color: #002619
+}
+
+h1 {
+    font-family: 'Georgia', cursive;
+}
+p {
+    font-family: 'Georgia', cursive;
+}
+
+p.center{
+    margin-left:20%
+    width: 60%;
+}
+
+
+
+.pageWrapper {
+    width: 70%;
+    margin-left: 15;
+    padding: 20px 20px 20px 20px;
+    background-color: #E8E595;
+}
+
+#chart_div {
+    margin-left:25%;
+}
